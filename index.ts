@@ -19,8 +19,6 @@ class Counter {
     }
 }
 
-var v = "Test 123";
-
 var counter = new Counter(3);
 do {
     counter.increment();
