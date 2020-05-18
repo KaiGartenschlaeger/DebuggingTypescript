@@ -2,16 +2,21 @@
     "name": "debugging_typescript",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "src/server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc",
-        "start": "node dist/server.js"
+        "start": "node ."
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@types/node": "^14.0.1"
+        "@types/express": "^4.17.6",
+        "@types/node": "^14.0.1",
+        "typescript": "^3.9.2"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
     }
 }
