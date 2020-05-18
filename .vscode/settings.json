@@ -7,8 +7,9 @@
     "files.insertFinalNewline": true,
     "files.encoding": "utf8",
     "files.exclude": {
-        "**/out": false,
-        "node_modules": false
+        "**/src/**/*.js": true,
+        "**/src/**/*.map": true,
+        "node_modules": true
     },
     "prettier.tabWidth": 4,
     "prettier.useTabs": false,
