@@ -1,19 +1,34 @@
 {
     "version": "0.2.0",
     "configurations": [
+        // {
+        //     "type": "node",
+        //     "request": "launch",
+        //     "name": "Launch Program",
+        //     "skipFiles": [
+        //         "<node_internals>/**"
+        //     ],
+        //     "preLaunchTask": "tsc: build - tsconfig.json",
+        //     "program": "${workspaceFolder}/src/index.js",
+        //     "outFiles": [
+        //         "${workspaceFolder}/src/**/*.js"
+        //     ],
+        //     "console": "internalConsole"
+        // },
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
+            "name": "Jasmine Current File",
+            "program": "${workspaceFolder}/node_modules/jasmine/bin/jasmine",
+            "args": [
+                "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.js"
             ],
             "preLaunchTask": "tsc: build - tsconfig.json",
-            "program": "${workspaceFolder}/src/index.js",
             "outFiles": [
                 "${workspaceFolder}/src/**/*.js"
             ],
-            "console": "internalConsole"
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
         }
     ]
 }

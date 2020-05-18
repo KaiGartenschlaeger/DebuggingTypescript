@@ -8,7 +8,7 @@
     "files.encoding": "utf8",
     "files.exclude": {
         "**/out": false,
-        "node_modules": true
+        "node_modules": false
     },
     "prettier.tabWidth": 4,
     "prettier.useTabs": false,
