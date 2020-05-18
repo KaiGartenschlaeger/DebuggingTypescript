@@ -1,9 +1,15 @@
-//import { StringHelper } from "./stringHelper";
+import * as sh from "./stringHelper";
 
 describe("stringHelper", function () {
-    // const helper = new StringHelper();
-    it("test", function () {
-        //  let result = helper.test();
-        //    expect(result).toBe();
+    it("successfull_test", function () {
+        expect(true).toBe(true);
+    });
+
+    it("failed_test", function () {
+        expect(false).toBe(true);
+    });
+
+    it("real_test", function () {
+        expect(false).toBe(true);
     });
 });

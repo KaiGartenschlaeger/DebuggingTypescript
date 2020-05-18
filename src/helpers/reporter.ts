@@ -7,7 +7,6 @@ import SuiteInfo = jasmine.SuiteInfo;
 
 class CustomProcessor extends DisplayProcessor {
     public displayJasmineStarted(info: SuiteInfo, log: string): string {
-        console.log("displayJasmineStarted");
         return `TypeScript ${log}`;
     }
 }
@@ -16,7 +15,7 @@ jasmine.getEnv().clearReporters();
 jasmine.getEnv().addReporter(
     new SpecReporter({
         spec: {
-            displayStacktrace: StacktraceOption.NONE,
+            displayStacktrace: StacktraceOption.PRETTY,
         },
         customProcessors: [CustomProcessor],
     })
