@@ -1,9 +1,14 @@
 {
     "compilerOptions": {
         "target": "ES5",
-        "module": "CommonJS",
+        "module": "UMD",
+        "moduleResolution": "Node",
         "sourceMap": true,
-        "outDir": "out",
-        "lib": ["ES2017", "DOM"]
-    }
+        "outDir": "dist",
+        "strict": true,
+        "alwaysStrict": true,
+        "esModuleInterop": true
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules"]
 }

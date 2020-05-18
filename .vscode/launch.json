@@ -6,9 +6,9 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/out/index.js",
+            "program": "${workspaceFolder}/dist/server.js",
             "preLaunchTask": "tsc: build - tsconfig.json",
-            "outFiles": ["${workspaceFolder}/out/**/*.js"],
+            "outFiles": ["${workspaceFolder}/dist/**/*.js"],
             "console": "internalConsole"
         }
     ]
