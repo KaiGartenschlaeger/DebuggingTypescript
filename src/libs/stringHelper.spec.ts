@@ -1,9 +1,9 @@
-import { StringHelper } from "./stringHelper";
+//import { StringHelper } from "./stringHelper";
 
 describe("stringHelper", function () {
-    const helper = new StringHelper();
+    // const helper = new StringHelper();
     it("test", function () {
-        let result = helper.test();
-        expect(result).toBe();
+        //  let result = helper.test();
+        //    expect(result).toBe();
     });
 });

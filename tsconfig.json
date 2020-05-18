@@ -5,8 +5,7 @@
         "sourceMap": true,
         "outDir": "src",
         "lib": [
-            "ES2017",
-            "DOM"
+            "ES6"
         ]
     },
     "include": [
