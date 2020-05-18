@@ -7,6 +7,7 @@
             "name": "Jasmine Current File",
             "program": "${workspaceFolder}/node_modules/jasmine/bin/jasmine",
             "args": [
+                "--config=jasmine.json",
                 "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.js"
             ],
             "preLaunchTask": "tsc: build - tsconfig.json",
