@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 const port = process.env.SERVER_PORT;
 
-app.use("/", express.static("app"));
+app.use("/", express.static("htdocs"));
 app.get("/test", (request, response) => {
     response.send("Hello from test!");
 });
