@@ -5,10 +5,14 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/out/index.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
             "preLaunchTask": "tsc: build - tsconfig.json",
-            "outFiles": ["${workspaceFolder}/out/**/*.js"],
+            "program": "${workspaceFolder}/src/index.js",
+            "outFiles": [
+                "${workspaceFolder}/src/**/*.js"
+            ],
             "console": "internalConsole"
         }
     ]
