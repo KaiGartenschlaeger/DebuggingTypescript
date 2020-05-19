@@ -7,10 +7,19 @@
     "files.insertFinalNewline": true,
     "files.encoding": "utf8",
     "files.exclude": {
-        "**/out": true
+        "**/src/**/*.js": true,
+        "**/src/**/*.map": true,
+        "node_modules": true
     },
     "prettier.tabWidth": 4,
     "prettier.useTabs": false,
     "prettier.singleQuote": false,
-    "prettier.semi": true
+    "prettier.semi": true,
+    "jasmineExplorer.config": "jasmine.json",
+    "jasmineExplorer.debuggerConfig": "Debug Jasmine Tests",
+    "jasmineExplorer.nodeArgv": [
+        "-r",
+        "ts-node/register"
+    ],
+    "jasmineExplorer.breakOnFirstLine": true
 }

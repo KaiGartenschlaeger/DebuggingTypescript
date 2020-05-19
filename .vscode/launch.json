@@ -5,11 +5,40 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/out/index.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/index.js",
             "preLaunchTask": "tsc: build - tsconfig.json",
-            "outFiles": ["${workspaceFolder}/out/**/*.js"],
+            "outFiles": [
+                "${workspaceFolder}/src/**/*.js"
+            ],
             "console": "internalConsole"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Jasmine Current File",
+            "program": "${workspaceFolder}/node_modules/jasmine/bin/jasmine",
+            "args": [
+                "--config=jasmine.json",
+                "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.js"
+            ],
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}/src/**/*.js"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Debug Jasmine Tests",
+            "type": "node",
+            "request": "attach",
+            "port": 9229,
+            "protocol": "inspector",
+            "timeout": 30000,
+            "stopOnEntry": false
         }
     ]
 }
