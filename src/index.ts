@@ -6,12 +6,16 @@ import { Environment } from "./environment";
 dotenv.config();
 
 const app = express();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const PORT = Environment.getPort();
 
 app.use((request, response, next) => {
+    // tslint:disable-next-line:no-console
+    console.log(`${Date.now()} - incoming request for url ${request.url}`);
+
     next();
 });
 

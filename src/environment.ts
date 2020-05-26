@@ -16,6 +16,6 @@ export class Environment {
     }
 
     public static getPort(): number {
-        return parseInt(process.env.PORT || "8000");
+        return parseInt(process.env.PORT || "8000", 10);
     }
 }
