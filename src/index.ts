@@ -10,6 +10,10 @@ app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.SERVER_PORT;
 
+app.use((request, response, next) => {
+    next();
+});
+
 app.get("/", (request, response) => {
     response.send("Hello world!");
 });
