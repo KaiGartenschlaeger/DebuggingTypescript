@@ -1,14 +1,35 @@
 import express from "express";
-const app = express();
-const port = 3000;
+import dotenv from "dotenv";
 
-// define a route handler for the default home page
-app.get("/", (req, res) => {
-    res.send("Hello world!");
+dotenv.config();
+
+const app = express();
+
+const PORT = process.env.SERVER_PORT;
+
+app.get("/", (request, response) => {
+    response.send("Hello world!");
 });
 
-// start the Express server
-app.listen(port, () => {
+app.get("/users", (request, response) => {
+    response.json({
+        count: 2,
+        users: [
+            {
+                id: 1,
+                firstName: "Max",
+                lastName: "Mustermann",
+            },
+            {
+                id: 2,
+                firstName: "Susi",
+                lastName: "Lustig",
+            },
+        ],
+    });
+});
+
+app.listen(PORT, () => {
     // tslint:disable-next-line:no-console
-    console.log(`server started at http://localhost:${port}`);
+    console.log(`server started at http://localhost:${PORT}`);
 });
