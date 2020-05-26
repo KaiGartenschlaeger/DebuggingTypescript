@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.SERVER_PORT;
+const PORT = Environment.getPort();
 
 app.use((request, response, next) => {
     next();
