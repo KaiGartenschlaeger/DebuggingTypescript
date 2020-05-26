@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import { v4 as uuidv4 } from "uuid";
+import { Environment } from "./environment";
 
 dotenv.config();
 
@@ -15,7 +16,7 @@ app.use((request, response, next) => {
 });
 
 app.get("/", (request, response) => {
-    response.send("Hello world!");
+    response.send("Hello world! " + Environment.getStage());
 });
 
 app.get("/user/:userId", (request, response) => {
